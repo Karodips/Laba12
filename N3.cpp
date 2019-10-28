@@ -9,7 +9,8 @@ int main() {
 	float r1, r2, kolc;
 	cin >> r1 >> r2;
 	if (r1 > r2) {
-		Ring(r1, r2, kolc);
+		Ring(r1, r2);
+		kolc = r1 - r2;
 		cout << kolc << endl;
 	}
 	else cout << "Nope" << endl;
@@ -17,9 +18,8 @@ int main() {
 	return 0;
 }
 
-void Ring(float &r1, float &r2, float &kolc)
+void Ring(float &r1, float &r2)
 {
 	r1 = r1 * r1 * 3.14;
 	r2 = r2 * r2 * 3.14;
-	kolc = r1 - r2;
 }
