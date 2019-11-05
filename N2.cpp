@@ -5,21 +5,20 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	int a, x, i;
+	int a, x, b;
 	x = 0;
-	for (i = 0; i != 2; i++) {
 		cin >> a;
-		Sign(a);
-		x = x + a;
-	}
+		cin >> b;
+		x= Sign(a)+ Sign(b);
+
 	cout << x << endl;
 	system("pause");
 	return 0;
 }
 
-void Sign(int &a)
+int Sign(int a)
 {
-	if (a > 0) a = 1;
-	else if (a < 0) a = -1;
-	else a = 0;
+	if (a > 0) return 1;
+	else if (a < 0) return -1;
+	else return 0;
 }
