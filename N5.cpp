@@ -1,32 +1,33 @@
 #include <iostream>
-#include "Source.h"
 
 using namespace std;
 
+int Fact2(int n);
+
 int main() {
 	setlocale(LC_ALL, "Russian");
-	int i, n, k;
+	int n;
 	cin >> n;
-	k = 1;
 	if (n != 0) {
-		Fact2(n, i, k);
+		cout << Fact2(n) << endl;
 	}
-	else k = 0;
-	cout << k << endl;
+	//cout << Fa << endl;
 	system("pause");
 	return 0;
 }
 
-void Fact2(int n, int &i, int &k)
+int Fact2(int n)
 {
-	if (n % 2 == 1) {
-		for (i = 1; i <= n; i += 2) {
-			k = k * i;
-		}
+	int k=1;
+
+	for (
+		int i = (n % 2 == 1)?1:2;
+		i <= n;
+		i += 2
+		) 
+	{
+		k = k * i;
 	}
-	else {
-		for (i = 2; i <= n; i += 2) {
-			k = k * i;
-		}
-	}
+
+	return k;
 }
